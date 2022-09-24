@@ -1,0 +1,156 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap');
+
+    :root {
+
+/*  Font Sizes  */
+
+        --fs-default: 16px;
+        --fs-small: calc( var( --fs-default ) * 0.8 );
+        --fs-medium: calc( var( --fs-default ) * 1.1 );
+        --fs-large: calc( var( --fs-default ) * 1.5 );
+
+        --letter-space-small: 1.29px;
+        --letter-space-large: 2.2;
+
+        --body-m: 1.125rem;
+        --body-s: 1rem;
+        --body-xs: 0.6rem;
+
+        --break-width-small: 375px;
+        --break-width-tablet: 768px;
+        --break-width-desktop: 1024px;
+        --break-width-largest: 1440px;
+
+        --image-width: 17.87rem;
+        --image-height: calc( var( --image-width ) * 0.5489 );
+
+/*  Colours */
+
+        --dark-blue: rgb( 23, 35, 57 );
+        --grey: rgb( 73, 86, 109 );
+        --cream-white: rgb( 250, 248, 246 );
+        --cream: rgb( 243, 237, 231 );
+        --mauve: rgb( 160, 96, 255 );
+        --pink: rgb( 203, 48, 227 );
+        --orange: rgb( 255, 168, 78 );
+    }
+
+    * {
+        font-size: var( --fs-default );
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        scroll-margin: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+    }
+
+    body {
+        border: 1px solid black;
+        width: 100%;
+        min-height: 100vh;
+        min-width: var( --break-width-small );
+        max-width: var( --break-width-largest );
+        background-color: var( --cream-white );
+    }
+
+    .heading-xl {
+        font-size: 4.5rem;
+        line-height: 4.875rem;
+        letter-spacing: -1px;
+    }
+
+    .heading-l {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .heading-m {
+        font-size: 2rem;
+        line-height: 2rem;
+        letter-spacing: -0.2px;
+    }
+
+    .heading-s {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        letter-spacing: -0.25px;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+        line-height: 2.185rem;
+    }
+
+    .bold-text {
+        font-weight: bold;
+    }
+
+    .body-text {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    .footer-text {
+        font-size: 0.9375rem;
+        line-height: 2rem;
+    }
+
+    .button-primary-default {
+        padding: 1em 2em;
+        background-color: var( --dark-blue );
+        color: white;
+        border-radius: 0.25em;
+    }
+
+    .button-primary-default:hover {
+        background-image: linear-gradient( var( --mauve ), var( --pink ), var( --orange ) );
+    }
+
+    .button-secondary-default {
+        border: 1px solid black;
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        width: auto;
+    }
+
+    .button-secondary-default:hover {
+        background-color: var( --dark-blue );
+        color: white;
+    }
+
+    .row-gap-medium {
+        row-gap: 2em;
+    }
+
+    .self-align-left {
+        align-self: flex-start;
+    }
+
+    .uppercase-this {
+        text-transform: uppercase;
+    }
+
+    .keep-font {
+        font-size: inherit;
+    }
+
+    .default-margin {
+        margin-top: 2rem;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .padding-x {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
