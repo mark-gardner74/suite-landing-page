@@ -88,8 +88,13 @@
         letter-spacing: 0.3px;
     }
 
+/*  Bits I need to work on  */
+
+/*  Whole Block */
+
     .upper-footer {
-        margin-top: 15rem;
+        position: relative;
+        margin-top: 13rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -98,20 +103,43 @@
         border-radius: 0.5rem;
         height: 50rem;
         color: white;
-        row-gap: 2rem;
+        row-gap: 1rem;
         padding-bottom: 2rem;
     }
 
-    .upper-footer::before {
+    .upper-footer::after {
+        position: absolute;
+        content: '';
+        border-radius: 999px;
+        top: 0;
+        left: 2.5rem;
+        width: 15rem;
+        height: 15rem;
+        opacity: 0.5;
+        background: radial-gradient( circle at 20%, var( --mauve ), var( --pink ), var( --orange ), transparent );
+        filter: blur( 24px );
+        z-index: 5;
+    }
+
+/*  Image   */
+
+    .container-person-image {
         position: absolute;
         content: '';
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
         background-image: url( "../assets/image-jeremy-small.png" );
-        top: -20rem;
+        top: -12rem;
+        left: 2.5rem;
         width: 75%;
         height: 75%;
+        z-index: 10;
+    }
+
+    .flex-spacing-around {
+        position: relative;
+        height: 55%;
+        justify-content: space-around !important;
     }
 
     .lower-footer {
@@ -181,6 +209,10 @@
             background-size: cover;
         }
 
+        .logo-class {
+            height: 2em;
+        }
+
         .lower-footer {
             flex-direction: row;
             height: 5rem;
@@ -201,9 +233,25 @@
         }
 
         .upper-footer::before {
-            background-image: url( "../assets/image-jeremy-large.png" );
+            background-image: url( "../assets/image-jeremy-small.png" );
         }
 
+        .container-person-image {
+            top: -15rem;
+            left: 12rem;
+        }
+
+        .upper-footer::after {
+            top: 0;
+            left: 10rem;
+            width: 25rem;
+            height: 25rem;
+            opacity: 0.3;
+        }
+
+        .flex-spacing-around {
+            height: 40%;
+        }
     }
 
     @media screen and ( min-width: 1024px ){
@@ -226,5 +274,57 @@
             padding: 0;
         }
 
+        .container-person-image, .flex-spacing-around {
+            width: 40%;
+        }
+
+        .flex-spacing-around {
+            height: 100%;
+        }
+
+        .container-person-image {
+            top: -9rem;
+            left: 2rem;
+            height: 130%;
+        }
+
+        .add-spacer {
+            margin-top: 7rem;
+        }
+
+        .upper-footer {
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 15rem;
+            height: 30rem;
+        }
+
+        .upper-footer::before {
+            background-image: url( "../assets/image-jeremy-large.png" );
+        }
+
+        .upper-footer::after {
+            top: 2.5rem;
+            left: 2.5rem;
+            width: 25rem;
+            height: 25rem;
+            opacity: 0.3;
+        }
+
+        .add-tick::before {
+            position: absolute;
+            background-image: url( "../assets/pattern-curved-line-2.svg" );
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 10rem;
+            width: 10rem;
+            top: 0;
+            left: -10rem;
+            border: 1px solid red;
+        }
+
+        .center-text {
+            text-align: left;
+        }
     }
 
